@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .modal-header,
+      h4,
+      .close {
+        background-color: #5cb85c;
+        color: white !important;
+        text-align: center;
+        font-size: 30px;
+      }
+      .modal-footer {
+        background-color: #f9f9f9;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_top">
+        <div class="container">
+          <div class="header__top">
+            <div class="header__content1">
+              <a href="#">
+                <span>mhhasanul@gmail.com</span>
+              </a>
+              <a href="#">
+                <span>(12345)67890</span>
+              </a>
+            </div>
+            <div class="header__content2">
+              <select>
+                <option>English</option>
+                <option>Rus</option>
+                <option>Uzbek</option>
+              </select>
+              <select>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>RUB</option>
+              </select>
+              <a href="#" id="myBtn">
+                <span>Login</span>
+              </a>
+
+              <a href="#">
+                <span>Wishlist</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom container">
+        <h1 class="header__bottom_title">Hekto</h1>
+        <ul class="header__bottom__list">
+          <li class="header__bottom__item">
+            <a href="#">Home</a>
+          </li>
+          <li class="header__bottom__item">
+            <a href="#">Pages</a>
+          </li>
+          <li class="header__bottom__item">
+            <a href="#">Products</a>
+          </li>
+          <li class="header__bottom__item">
+            <a href="#">Blog </a>
+          </li>
+          <li class="header__bottom__item">
+            <a href="#">Shop</a>
+          </li>
+          <li class="header__bottom__item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="header__bottom_input">
+          <input type="text" class="header__bottom_input_search" />
+          <div class="header__bottom_input_search_icon">
+            <a href="#">
+              <img src="./img/header__input_search.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="padding: 35px 50px">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+            </div>
+            <div class="modal-body" style="padding: 40px 50px">
+              <form role="form">
+                <div class="form-group">
+                  <label for="usrname"
+                    ><span class="glyphicon glyphicon-user"></span>
+                    Username</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usrname"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="psw"
+                    ><span class="glyphicon glyphicon-eye-open"></span>
+                    Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="psw"
+                    placeholder="Enter password"
+                  />
+                </div>
+                <div class="checkbox">
+                  <label
+                    ><input type="checkbox" value="" checked />Remember
+                    me</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-success btn-block">
+                  <span class="glyphicon glyphicon-off"></span> Login
+                </button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger btn-default pull-left"
+                data-dismiss="modal"
+              >
+                <span class="glyphicon glyphicon-remove"></span> Cancel
+              </button>
+              <p>Not a member? <a href="#">Sign Up</a></p>
+              <p>Forgot <a href="#">Password?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <p class="hero__text">Best Furniture For Your Castle....</p>
+          <h1 class="hero__title">New Furniture Collection Trends in 2020</h1>
+          <p class="hero__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in
+            est adipiscing in phasellus non in justo.
+          </p>
+          <button class="hero__btn">Shop Now</button>
+        </div>
+        <div class="hero__img">
+          <img src="./img/hero.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="products">
+      <div class="container">
+        <h2 class="products__title">Featured Products</h2>
+        <div class="container">
+          <div class="offer-grid">
+            <div class="offer-card">
+              <img src="./img/products1.png" class="offer-icon" alt="Icon 1" />
+              <div class="offer-title">Cantilever chair</div>
+              <svg
+                width="52"
+                height="4"
+                viewBox="0 0 52 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="14" height="4" rx="2" fill="#05E6B7" />
+                <rect x="19" width="14" height="4" rx="2" fill="#F701A8" />
+                <rect x="38" width="14" height="4" rx="2" fill="#00009D" />
+              </svg>
+              <div class="offer-desc">Code - Y523201</div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/products2.png" class="offer-icon" alt="Icon 2" />
+              <div class="offer-title">Cantilever chair</div>
+              <svg
+                width="52"
+                height="4"
+                viewBox="0 0 52 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="14" height="4" rx="2" fill="#05E6B7" />
+                <rect x="19" width="14" height="4" rx="2" fill="#F701A8" />
+                <rect x="38" width="14" height="4" rx="2" fill="#00009D" />
+              </svg>
+              <div class="offer-desc">Code - Y523201</div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/products3.png" class="offer-icon" alt="Icon 3" />
+              <div class="offer-title">Cantilever chair</div>
+              <svg
+                width="52"
+                height="4"
+                viewBox="0 0 52 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="14" height="4" rx="2" fill="#05E6B7" />
+                <rect x="19" width="14" height="4" rx="2" fill="#F701A8" />
+                <rect x="38" width="14" height="4" rx="2" fill="#00009D" />
+              </svg>
+              <div class="offer-desc">Code - Y523201</div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/products4.png" class="offer-icon" alt="Icon 4" />
+              <div class="offer-title">Cantilever chair</div>
+              <svg
+                width="52"
+                height="4"
+                viewBox="0 0 52 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="14" height="4" rx="2" fill="#05E6B7" />
+                <rect x="19" width="14" height="4" rx="2" fill="#F701A8" />
+                <rect x="38" width="14" height="4" rx="2" fill="#00009D" />
+              </svg>
+              <div class="offer-desc">Code - Y523201</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="leatest">
+      <div class="container">
+        <h2 class="leatest__title">Leatest Products</h2>
+        <ul class="leatest__list">
+          <li class="leatest__item">
+            <a href="#">New Arrival</a>
+          </li>
+          <li class="leatest__item">
+            <a href="#">Best Seller</a>
+          </li>
+          <li class="leatest__item">
+            <a href="#">Featured</a>
+          </li>
+          <li class="leatest__item">
+            <a href="#">Special Offer</a>
+          </li>
+        </ul>
+        <div class="offer-grid grid2">
+          <div class="offer-card card2">
+            <img src="./img/leatest1.png" class="offer-icon" alt="Icon 1" />
+            <div class="offer-title title2">Cantilever chair</div>
+            <div class="offer-desc">Code - Y523201</div>
+          </div>
+          <div class="offer-card card2">
+            <img src="./img/leatest2.png" class="offer-icon" alt="Icon 2" />
+            <div class="offer-title title2">Comfort Handy Craft</div>
+            <div class="offer-desc">$42.00</div>
+          </div>
+          <div class="offer-card card2">
+            <img src="./img/products3.png" class="offer-icon" alt="Icon 3" />
+            <div class="offer-title title2">Comfort Handy Craft</div>
+            <div class="offer-desc">$42.00</div>
+          </div>
+          <div class="offer-card card2">
+            <img src="./img/leatest3.png" class="offer-icon" alt="Icon 4" />
+            <div class="offer-title title2">Comfort Handy Craft</div>
+            <div class="offer-desc">$42.00</div>
+          </div>
+          <div class="offer-card card2">
+            <img src="./img/leatest4.png" class="offer-icon" alt="Icon 4" />
+            <div class="offer-title title2">Comfort Handy Craft</div>
+            <div class="offer-desc">$42.00</div>
+          </div>
+          <div class="offer-card card2">
+            <img src="./img/leatest5.png" class="offer-icon" alt="Icon 4" />
+            <div class="offer-title title2">Comfort Handy Craft</div>
+            <div class="offer-desc">$42.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="offer">
+      <div class="container">
+        <h2 class="products__title">What Shopex Offer!</h2>
+        <div class="container">
+          <div class="offer-grid">
+            <div class="offer-card">
+              <img src="./img/offer.svg" class="offer-icon" alt="Icon 1" />
+              <div class="offer-title title3">24/7 Support</div>
+              <div class="offer-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+                purus gravida.
+              </div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/offer.svg" class="offer-icon" alt="Icon 2" />
+              <div class="offer-title title3">24/7 Support</div>
+              <div class="offer-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+                purus gravida.
+              </div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/offer.svg" class="offer-icon" alt="Icon 3" />
+              <div class="offer-title title3">24/7 Support</div>
+              <div class="offer-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+                purus gravida.
+              </div>
+            </div>
+            <div class="offer-card">
+              <img src="./img/offer.svg" class="offer-icon" alt="Icon 4" />
+              <div class="offer-title title3">24/7 Support</div>
+              <div class="offer-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
+                purus gravida.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      $(document).ready(function () {
+        $("#myBtn").click(function () {
+          $("#myModal").modal();
+        });
+      });
+    </script>
+  </body>
+</html>
