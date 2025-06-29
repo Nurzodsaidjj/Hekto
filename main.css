@@ -20,12 +20,30 @@
   --page-button-color: #e0d3f5;
   --pink: #fb2e86;
 }
+
 :root {
   --font-family: "Poppins", sans-serif;
   --second-family: "Raleway", sans-serif;
   --third-family: "Lato", sans-serif;
   --font3: "Josefin Sans", sans-serif;
 }
+body.dark{
+   --bg-shade: #121214;
+  --grey-text: #efefef;
+  --accent: #fb2e86;
+  --white: #1d1b1b;
+  --ugsadug: #9f63b5;
+  --text: #fcfcff;
+  --sky-blue: #00c1fe;
+  --section-hover: #2f1ac4;
+  --sale-tage-coloe: #3f509e;
+  --price-tag-color: #fb2448;
+  --violet: #7e33e0;
+  --sub-text-color: #8a8fb9;
+  --page-button-color: #e0d3f5;
+  --pink: #e879a9;
+}
+
 ul,
 li {
   list-style: none;
@@ -38,7 +56,8 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #fff;
+  background: var(--bg-shade);
+  color: var(--text);
 }
 
 .container {
@@ -55,13 +74,33 @@ body {
   font-family: var(--font3);
   font-weight: 600;
   font-size: 16px;
-  color: #f1f1f1;
+  color: var(--text);
 }
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__top_login::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./img/header_top_login.svg);
+  background-size: cover;
+  background-position: center;
+  margin-left: 8px;
+}
+.header__top_wishlist::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(./img/header__top_korzinka.svg);
+  background-size: cover;
+  background-position: center;
+  margin-left: 8px;
 }
 .header__content1 {
   display: flex;
@@ -80,7 +119,7 @@ select {
   font-family: var(--font3);
   font-weight: 600;
   font-size: 16px;
-  color: #f1f1f1;
+  color: var(--text);
   cursor: pointer;
 }
 .header__bottom {
@@ -93,7 +132,7 @@ select {
   font-family: var(--font3);
   font-weight: 700;
   font-size: 34px;
-  color: #0d0e43;
+  color: var(--text);
 }
 .header__bottom__list {
   display: flex;
@@ -106,7 +145,7 @@ select {
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
-  color: #0d0e43;
+  color: var(--text);
   position: relative;
 }
 .header__bottom__item:nth-child(1) {
@@ -130,6 +169,17 @@ select {
   width: 100%;
   max-width: 400px;
 }
+.theme__btn {
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white);
+  background: var(--accent);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
 .header__bottom_input_search_icon {
   display: flex;
   justify-content: center;
@@ -150,7 +200,7 @@ select {
   border-radius: 0px 8px 8px 0px;
 }
 .hero {
-  background: #f2f0ff;
+  background: var(--bg-shade);
   padding-top: 10px;
 }
 .hero__container {
@@ -195,7 +245,7 @@ select {
   font-size: 53px;
   line-height: 120%;
   letter-spacing: 0.01em;
-  color: #000;
+  color: var(--text);
   margin-bottom: 12px;
 }
 .hero__desc {
@@ -236,11 +286,11 @@ select {
   gap: 20px;
 }
 .offer-card {
-  background-color: #f9f9f9;
+  background-color: var(--white);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
-  background: #f6f7fb;
+  background: var(--page-button-color);
   width: 23%;
   text-align: center;
 }
@@ -255,7 +305,7 @@ select {
 }
 .offer-desc {
   font-size: 14px;
-  color: #555;
+  color: var(--sub-text-color);
 }
 .leatest__list {
   display: flex;
@@ -271,16 +321,28 @@ select {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 42px;
-  color: #1a0b5b;
+  color: var(--text);
 }
 .leatest__item {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 18px;
   color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;;
 }
-.leatest__item:nth-child(1) {
+
+.leatest__item:hover{
   color: var(--accent);
+}
+.product__box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 380px;
+}
+img{
+  max-width: 70%;
+  height: auto;
 }
 
 .grid2 {
@@ -290,7 +352,7 @@ select {
   justify-items: center;
 }
 .card2 {
-  background-color: #f9f9f9;
+  background-color: var(--white);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -318,4 +380,9 @@ select {
   font-size: 22px;
   color: var(--text);
   margin-bottom: 20px;
+}
+
+.active__tab {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
